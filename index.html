@@ -15,42 +15,36 @@ body{
 /* HEADER */
 header{
     background: linear-gradient(135deg, #F23558, #8B3DD9);
-    color:white;
-    padding:60px 20px;
+    padding:40px 20px 20px 20px;
     text-align:center;
 }
 
-header h1{
-    font-size:48px;
+/* LOGO */
+header img{
+    max-width:450px;
+    width:100%;
+    height:auto;
     margin-bottom:10px;
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.3));
 }
 
-header h2{
-    font-weight:300;
-    margin:10px 0;
-}
-
-header p{
-    font-size:18px;
-}
-
-/* NAV */
+/* NAV integrado al header */
 nav{
-    background:#8B3DD9;
-    padding:15px;
+    background: transparent;
     text-align:center;
+    padding:15px 0;
 }
 
 nav a{
     color:white;
-    margin:15px;
+    margin:0 25px;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:600;
+    font-size:18px;
 }
 
 nav a:hover{
-    color:#F2F2F2;
-    text-decoration:underline;
+    opacity:0.8;
 }
 
 /* SECTIONS */
@@ -63,21 +57,16 @@ section{
     background:white;
 }
 
-#inicio ul{
-    list-style:none;
-    padding:0;
+#inicio p{
+    max-width:900px;
+    margin:10px auto;
 }
 
-#inicio ul li{
-    margin:10px 0;
-    font-size:18px;
-}
-
-/* PRODUCTOS */
 #productos{
     background:#F2F2F2;
 }
 
+/* PRODUCTOS */
 .productos{
     display:flex;
     flex-wrap:wrap;
@@ -136,7 +125,7 @@ footer{
 <body>
 
 <header>
-<img src="logo.png" alt="COPY STORE Logo" style="max-width:80%; height:auto; margin-bottom:5px;">
+<img src="logo.png" alt="COPY STORE Logo">
 </header>
     
 <nav>
@@ -152,15 +141,13 @@ footer{
 
 <p>
 Ofrecemos soluciones integrales en impresión digital, publicidad y merchandising,
-</p>
-
-<p>
-adaptadas a empresas, instituciones y emprendedores que buscan calidad y profesionalismo,
+adaptadas a empresas, instituciones y emprendedores que buscan calidad y profesionalismo.
 </p>
     
 <p>
-aquí encuentras todo lo que necesitas para estudiar, trabajar, crear y organizar tu mundo.
+Aquí encuentras todo lo que necesitas para estudiar, trabajar, crear y organizar tu mundo.
 </p>
+
 <p><em>Porque sabemos que cada hoja en blanco es una oportunidad.</em></p>
 </section>
 
