@@ -11,40 +11,89 @@ body{
     font-family: Arial, sans-serif;
     background-color:#f4f4f4;
 }
+
+/* HEADER MODERNO */
 header{
-    background:#0f172a;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color:white;
-    padding:30px;
+    padding:60px 20px;
     text-align:center;
 }
+
+header h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+header h2{
+    font-weight:300;
+    margin:10px 0;
+}
+
+header p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+/* NAVEGACIÓN */
 nav{
     background:#1e293b;
     padding:15px;
     text-align:center;
 }
+
 nav a{
     color:white;
     margin:15px;
     text-decoration:none;
     font-weight:bold;
 }
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* SECCIONES */
 section{
     padding:50px;
     text-align:center;
 }
+
+#inicio{
+    background:white;
+}
+
+#inicio ul{
+    list-style:none;
+    padding:0;
+}
+
+#inicio ul li{
+    margin:10px 0;
+    font-size:18px;
+}
+
+/* PRODUCTOS */
 .productos{
     display:flex;
     justify-content:center;
     gap:20px;
     flex-wrap:wrap;
 }
+
 .card{
     background:white;
     padding:20px;
     width:250px;
     border-radius:10px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
 button{
     background:#0f172a;
     color:white;
@@ -53,6 +102,12 @@ button{
     border-radius:5px;
     cursor:pointer;
 }
+
+button:hover{
+    background:#1e293b;
+}
+
+/* FOOTER */
 footer{
     background:#1e293b;
     color:white;
@@ -73,21 +128,25 @@ footer{
     
 <nav>
 <a href="#inicio">Inicio</a>
-<a href="#productos">Productos</a>
+<a href="#productos">Servicios</a>
 <a href="#contacto">Contacto</a>
 </nav>
 
 <section id="inicio">
 <h2>Bienvenidos a COPY STORE</h2>
+
 <p><strong>En Copy Store no solo vendemos útiles… impulsamos sueños, proyectos y metas.</strong></p>
+
 <p>
 Aquí encuentras todo lo que necesitas para estudiar, trabajar, crear y organizar tu mundo.
 </p>
-<ul style="list-style: none; padding: 0;">
-<li> Desde los cuadernos que acompañan tus clases</li>
-<li> Hasta los materiales que dan vida a tus proyectos</li>
-<li> Y los detalles que hacen tu escritorio único</li>
+
+<ul>
+<li>📓 Desde los cuadernos que acompañan tus clases</li>
+<li>🎨 Hasta los materiales que dan vida a tus proyectos</li>
+<li>✨ Y los detalles que hacen tu escritorio único</li>
 </ul>
+
 <p><em>Porque sabemos que cada hoja en blanco es una oportunidad.</em></p>
 </section>
 
@@ -103,14 +162,14 @@ Aquí encuentras todo lo que necesitas para estudiar, trabajar, crear y organiza
 </div>
 
 <div class="card">
-<h3>Útiles</h3>
+<h3>Útiles Escolares</h3>
 <p>Cuadernos, esferos, carpetas y más.</p>
 <button>Consultar</button>
 </div>
 
 <div class="card">
-<h3>Impresiones</h3>
-<p>Servicio rápido y económico.</p>
+<h3>Impresiones y Copias</h3>
+<p>Servicio rápido, económico y de calidad.</p>
 <button>Consultar</button>
 </div>
 
@@ -119,22 +178,44 @@ Aquí encuentras todo lo que necesitas para estudiar, trabajar, crear y organiza
 
 <section id="contacto">
 <h2>Contacto</h2>
-<p>📍 Dirección: Av.Los Chasquis, Ambato - Ecuador</p>
+
+<p>📍 Dirección: Av. Los Chasquis, Ambato - Ecuador</p>
+
 <p>📞 WhatsApp: 
 <a href="https://wa.me/593994620578" target="_blank">
-+593 99 123 4567
++593 99 462 0578
 </a>
 </p>
+
 <p>📧 Email: 
 <a href="mailto:copystore2023@gmail.com">
 copystore2023@gmail.com
 </a>
 </p>
+
 </section>
 
 <footer>
-<p>© 2026 COPY STORE</p>
+<p>© 2026 COPY STORE - Todos los derechos reservados</p>
 </footer>
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/593994620578" 
+   style="
+   position:fixed;
+   bottom:20px;
+   right:20px;
+   background:#25D366;
+   color:white;
+   padding:15px 20px;
+   border-radius:50px;
+   text-decoration:none;
+   font-weight:bold;
+   box-shadow:0 4px 10px rgba(0,0,0,0.3);
+   "
+   target="_blank">
+   💬 WhatsApp
+</a>
 
 </body>
 </html>
