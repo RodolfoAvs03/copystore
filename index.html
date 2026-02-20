@@ -79,10 +79,20 @@ section{
 }
 
 .productos{
-    display:flex;
-    justify-content:center;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
     gap:20px;
-    flex-wrap:wrap;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* Para que los últimos 2 se centren abajo */
+.productos .card:nth-child(6){
+    grid-column:2 / 3;
+}
+
+.productos .card:nth-child(7){
+    grid-column:4 / 5;
 }
 
 .card{
