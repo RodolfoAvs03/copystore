@@ -268,5 +268,43 @@ copystore2023@gmail.com
    💬 WhatsApp
 </a>
 
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>IMPRESIÓN DIGITAL</h2>
+
+    <p><strong>Formatos disponibles:</strong></p>
+    <p>A4, A3, A2, A1, A0<br>
+    Super A3<br>
+    Mega A3</p>
+
+    <p><strong>Servicios especializados:</strong></p>
+    <p>
+    Impresión de planos arquitectónicos<br>
+    Copias de planos<br>
+    Impresión en tablones<br>
+    Material técnico y profesional
+    </p>
+  </div>
+</div>
+
+<script>
+function openModal(){
+    document.getElementById("modal").style.display = "flex";
+}
+
+document.querySelector(".close").onclick = function(){
+    document.getElementById("modal").style.display = "none";
+}
+
+window.onclick = function(event){
+    let modal = document.getElementById("modal");
+    if(event.target == modal){
+        modal.style.display = "none";
+    }
+}
+</script>
+    
 </body>
 </html>
