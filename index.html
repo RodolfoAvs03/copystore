@@ -307,39 +307,87 @@ copystore2023@gmail.com
 <div id="modal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-
-    <h2>IMPRESIÓN DIGITAL</h2>
-
-    <p><strong>Formatos disponibles:</strong></p>
-    <p>A4, A3, A2, A1, A0<br>
-    Super A3<br>
-    Mega A3</p>
-
-    <p><strong>Servicios especializados:</strong></p>
-    <p>
-    Impresión de planos arquitectónicos<br>
-    Copias de planos<br>
-    Impresión en tablones<br>
-    Material técnico y profesional
-    </p>
+    <h2 id="modal-title"></h2>
+    <div id="modal-body"></div>
   </div>
 </div>
 
 <script>
-function openModal(){
-    document.getElementById("modal").style.display = "flex";
+function openModal(tipo){
+
+    const modal = document.getElementById("modal");
+    const title = document.getElementById("modal-title");
+    const body = document.getElementById("modal-body");
+
+    const contenido = {
+
+        papeleria: {
+            titulo: "PAPELERÍA",
+            texto: `
+            <p><strong>Productos disponibles:</strong></p>
+            <p>Cuadernos<br>Carpetas<br>Esferos<br>Archivadores<br>Material escolar y de oficina</p>`
+        },
+
+        impresion: {
+            titulo: "IMPRESIÓN DIGITAL",
+            texto: `
+            <p><strong>Formatos disponibles:</strong></p>
+            <p>A4, A3, A2, A1, A0<br>Super A3<br>Mega A3</p>
+            <p><strong>Servicios especializados:</strong></p>
+            <p>Impresión de planos arquitectónicos<br>Copias de planos<br>Impresión en tablones<br>Material técnico y profesional</p>`
+        },
+
+        acabados: {
+            titulo: "ACABADOS PROFESIONALES",
+            texto: `
+            <p><strong>Servicios:</strong></p>
+            <p>Plastificado<br>Encuadernado<br>Anillado<br>Empastado<br>Corte personalizado</p>`
+        },
+
+        publicidad: {
+            titulo: "PUBLICIDAD IMPRESA",
+            texto: `
+            <p><strong>Material publicitario:</strong></p>
+            <p>Flyers<br>Trípticos<br>Afiches<br>Tarjetas de presentación<br>Catálogos</p>`
+        },
+
+        merchandising: {
+            titulo: "MERCHANDISING",
+            texto: `
+            <p><strong>Productos promocionales:</strong></p>
+            <p>Tazas<br>Camisetas<br>Gorras<br>Llaveros<br>Artículos corporativos</p>`
+        },
+
+        especializada: {
+            titulo: "IMPRESIÓN ESPECIALIZADA",
+            texto: `
+            <p><strong>Tecnologías disponibles:</strong></p>
+            <p>Sublimación<br>Vinil<br>Gran formato<br>Personalización especial</p>`
+        },
+
+        rotulacion: {
+            titulo: "PUBLICIDAD EXTERIOR Y ROTULACIÓN",
+            texto: `
+            <p><strong>Soluciones visuales:</strong></p>
+            <p>Rótulos<br>Letreros luminosos<br>Señalética<br>Rotulación vehicular</p>`
+        }
+
+    };
+
+    title.innerText = contenido[tipo].titulo;
+    body.innerHTML = contenido[tipo].texto;
+
+    modal.style.display = "flex";
 }
 
-function closeModal(){
+document.querySelector(".close").addEventListener("click", function(){
     document.getElementById("modal").style.display = "none";
-}
-
-document.querySelector(".close").addEventListener("click", closeModal);
+});
 
 window.addEventListener("click", function(event){
     const modal = document.getElementById("modal");
     if(event.target === modal){
-        closeModal();
+        modal.style.display = "none";
     }
 });
 </script>
