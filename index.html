@@ -337,10 +337,14 @@ function openModal(tipo){
 
         papeleria: {
             titulo: "PAPELERÍA",
-            texto: `
-            <p><strong>Productos disponibles:</strong></p>
-            <p>•	Cuadernos<br>•	Carpetas<br>•	Esferos<br>•	Archivadores<br>•	Material escolar y de oficina</p>`
-        },
+            items: [
+                { nombre: "Cuadernos", img: "img/cuadernos.jpg" },
+                { nombre: "Carpetas", img: "img/carpetas.jpg" },
+                { nombre: "Esferos", img: "img/esferos.jpg" },
+                { nombre: "Archivadores", img: "img/archivadores.jpg" },
+                { nombre: "Material escolar y de oficina", img: "img/material.jpg" }
+            ]
+        }
 
         impresion: {
             titulo: "IMPRESIÓN DIGITAL",
@@ -392,22 +396,31 @@ function openModal(tipo){
 
     };
 
-    title.innerText = contenido[tipo].titulo;
-    body.innerHTML = contenido[tipo].texto;
+    title.innerText = catalogo[tipo].titulo;
+
+    let contenidoHTML = '<div class="catalogo-grid">';
+
+    catalogo[tipo].items.forEach(item => {
+
+        let mensaje = encodeURIComponent("Hola, quiero información sobre " + item.nombre + " de COPY STORE");
+
+        contenidoHTML += `
+        <div class="catalogo-item">
+            <img src="${item.img}" alt="${item.nombre}">
+            <p>${item.nombre}</p>
+            <a href="https://wa.me/593994620578?text=${mensaje}" target="_blank" class="btn-whatsapp">
+                Consultar
+            </a>
+        </div>
+        `;
+    });
+
+    contenidoHTML += '</div>';
+
+    body.innerHTML = contenidoHTML;
 
     modal.style.display = "flex";
 }
-
-document.querySelector(".close").addEventListener("click", function(){
-    document.getElementById("modal").style.display = "none";
-});
-
-window.addEventListener("click", function(event){
-    const modal = document.getElementById("modal");
-    if(event.target === modal){
-        modal.style.display = "none";
-    }
-});
 </script>
     
 </body>
