@@ -377,7 +377,7 @@ function openModal(tipo){
                 { nombre: "Archivadores", img: "img/archivadores.jpg" },
                 { nombre: "Material escolar y de oficina", img: "img/material.jpg" }
             ]
-        }
+        },
 
         impresion: {
             titulo: "IMPRESIÓN DIGITAL",
@@ -429,11 +429,13 @@ function openModal(tipo){
 
     };
 
-    title.innerText = catalogo[tipo].titulo;
+if(!contenido[tipo]) return;
+
+    title.innerText = contenido[tipo].titulo;
 
     let contenidoHTML = '<div class="catalogo-grid">';
 
-    catalogo[tipo].items.forEach(item => {
+    contenido[tipo].items.forEach(item => {
 
         let mensaje = encodeURIComponent("Hola, quiero información sobre " + item.nombre + " de COPY STORE");
 
