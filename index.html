@@ -380,54 +380,132 @@ function openModal(tipo){
         },
 
         impresion: {
-            titulo: "IMPRESIÓN DIGITAL",
-            texto: `
-            <p><strong>Formatos disponibles:</strong></p>
-            <p>•	A4, A3, A2, A1, A0<br>•	Super A3<br>•	Mega A3</p>
-            <p><strong>Servicios especializados:</strong></p>
-            <p>•	Impresión de planos arquitectónicos<br>•	Copias de planos<br>•	Impresión en tablones<br>•	Material técnico y profesional</p>`
-        },
+        titulo: "IMPRESIÓN DIGITAL",
+        categorias: [
+            {
+                subtitulo: "Formatos disponibles",
+                items: [
+                    { nombre: "A4", img: "img/a4.jpg" },
+                    { nombre: "A3", img: "img/a3.jpg" },
+                    { nombre: "A2", img: "img/a2.jpg" },
+                    { nombre: "A1", img: "img/a1.jpg" },
+                    { nombre: "A0", img: "img/a0.jpg" },
+                    { nombre: "Super A3", img: "img/supera3.jpg" },
+                    { nombre: "Mega A3", img: "img/megaa3.jpg" }
+                ]
+            },
+            {
+                subtitulo: "Servicios especializados",
+                items: [
+                    { nombre: "Impresión de planos arquitectónicos", img: "img/planos.jpg" },
+                    { nombre: "Copias de planos", img: "img/planos.jpg" },
+                    { nombre: "Impresión en tablones", img: "img/planos.jpg" },
+                    { nombre: "Material técnico y profesional", img: "img/planos.jpg" }
+                ]
+            }
+        ]
+    },
 
-        acabados: {
-            titulo: "ACABADOS PROFESIONALES",
-            texto: `
-            <p><strong>Servicios:</strong></p>
-            <p>•	Laminados<br>•	Encuadernado<br>•	Anillado<br>•	Empastado<br>•	Corte personalizado<br>•	Rigidizados<br>•	Empastado de tesis<br>•	Anillado doble</p>`
-        },
+    acabados: {
+        titulo: "ACABADOS PROFESIONALES",
+        categorias: [
+            {
+                subtitulo: "Servicios",
+                items: [
+                    { nombre: "Laminado", img: "img/laminado.jpg" },
+                    { nombre: "Encuadernado", img: "img/encuadernado.jpg" },
+                    { nombre: "Anillado", img: "img/anillado.jpg" },
+                    { nombre: "Empastado de tesis", img: "img/empastado.jpg" },
+                    { nombre: "Corte personalizado", img: "img/corte.jpg" },
+                    { nombre: "Rigidizados", img: "img/rigidizado.jpg" }
+                ]
+            }
+        ]
+    },
 
-        publicidad: {
-            titulo: "PUBLICIDAD IMPRESA",
-            texto: `
-            <p><strong>Material publicitario:</strong></p>
-            <p>•	Flyers<br>•	Trípticos<br>•	Afiches<br>•	Tarjetas de presentación<br>•	Catálogos<br>•	Habladores<br>•	Folletos</p>`
-        },
+    publicidad: {
+        titulo: "PUBLICIDAD IMPRESA",
+        categorias: [
+            {
+                subtitulo: "Material publicitario",
+                items: [
+                    { nombre: "Flyers", img: "img/flyers.jpg" },
+                    { nombre: "Trípticos", img: "img/tripticos.jpg" },
+                    { nombre: "Afiches", img: "img/afiches.jpg" },
+                    { nombre: "Tarjetas de presentación", img: "img/tarjetas.jpg" },
+                    { nombre: "Catálogos", img: "img/catalogos.jpg" },
+                    { nombre: "Habladores", img: "img/habladores.jpg" }
+                ]
+            }
+        ]
+    },
 
-        merchandising: {
-            titulo: "MERCHANDISING CORPORATIVO",
-            texto: `
-            <p><strong>Productos promocionales:</strong></p>
-            <p>•	Agendas empresariales<br>•	Agendas institucionales<br>•	Agendas personalizadas<br>•	Artículos promocionales<br>•	Regalos corporativos<br>•	Productos publicitarios personalizados</p>`
-        },
+    merchandising: {
+        titulo: "MERCHANDISING CORPORATIVO",
+        categorias: [
+            {
+                subtitulo: "Productos promocionales",
+                items: [
+                    { nombre: "Agendas empresariales", img: "img/agendas.jpg" },
+                    { nombre: "Agendas institucionales", img: "img/agendas.jpg" },
+                    { nombre: "Agendas personalizadas", img: "img/agendas.jpg" },
+                    { nombre: "Regalos corporativos", img: "img/regalos.jpg" },
+                    { nombre: "Productos personalizados", img: "img/promocionales.jpg" }
+                ]
+            }
+        ]
+    },
 
-        especializada: {
-            titulo: "IMPRESIÓN ESPECIALIZADA",
-            texto: `
-            <p><strong>DTF UV – Impresión en cualquier superficie:</strong></p>
-            <p>•	Madera<br>•	Vinil<br>•	Vidrio<br>•	Acrílico<br>•	Porcelana<br>•	Metal<br>•	Plástico<br>•	Y múltiples materiales adicionales</p>
-            <p><strong>DTF Textil:</strong></p>
-            <p>•	Camisetas<br>•	Uniformes<br>•	Gorras<br>•	Bolsos<br>•	Ropa corporativa</p>
-            <p><strong>Corte y Grabado Láser:</strong></p>
-            <p>•	Madera<br>•	Acrílico<br>•	Cuero</p>`
-        },
+    especializada: {
+        titulo: "IMPRESIÓN ESPECIALIZADA",
+        categorias: [
+            {
+                subtitulo: "DTF UV – Impresión en superficies",
+                items: [
+                    { nombre: "Impresión en madera", img: "img/dtfuv.jpg" },
+                    { nombre: "Impresión en acrílico", img: "img/dtfuv.jpg" },
+                    { nombre: "Impresión en vidrio", img: "img/dtfuv.jpg" },
+                    { nombre: "Impresión en metal", img: "img/dtfuv.jpg" }
+                ]
+            },
+            {
+                subtitulo: "DTF Textil",
+                items: [
+                    { nombre: "Camisetas personalizadas", img: "img/textil.jpg" },
+                    { nombre: "Uniformes", img: "img/textil.jpg" },
+                    { nombre: "Gorras", img: "img/textil.jpg" },
+                    { nombre: "Ropa corporativa", img: "img/textil.jpg" }
+                ]
+            },
+            {
+                subtitulo: "Corte y Grabado Láser",
+                items: [
+                    { nombre: "Grabado en madera", img: "img/laser.jpg" },
+                    { nombre: "Grabado en acrílico", img: "img/laser.jpg" },
+                    { nombre: "Grabado en cuero", img: "img/laser.jpg" }
+                ]
+            }
+        ]
+    },
 
-        rotulacion: {
-            titulo: "PUBLICIDAD EXTERIOR Y ROTULACIÓN",
-            texto: `
-            <p><strong>Soluciones visuales:</strong></p>
-            <p>•	Rótulos<br>•	Letreros luminosos<br>•	Señalética<br>•	Lonas publicitarias<br>•	Vinil adhesivo<br>•	Vinil arenado<br>•	Rotulación comercial</p>`
-        }
+    rotulacion: {
+        titulo: "PUBLICIDAD EXTERIOR Y ROTULACIÓN",
+        categorias: [
+            {
+                subtitulo: "Soluciones visuales",
+                items: [
+                    { nombre: "Rótulos", img: "img/rotulos.jpg" },
+                    { nombre: "Letreros luminosos", img: "img/luminosos.jpg" },
+                    { nombre: "Señalética", img: "img/senaletica.jpg" },
+                    { nombre: "Lonas publicitarias", img: "img/lonas.jpg" },
+                    { nombre: "Vinil adhesivo", img: "img/vinil.jpg" },
+                    { nombre: "Vinil arenado", img: "img/vinil.jpg" }
+                ]
+            }
+        ]
+    }
 
-    };
+};
 
 if(!contenido[tipo]) return;
 
