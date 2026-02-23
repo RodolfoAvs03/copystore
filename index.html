@@ -509,11 +509,16 @@ function openModal(tipo){
 
 if(!contenido[tipo]) return;
 
-    title.innerText = contenido[tipo].titulo;
+title.innerText = contenido[tipo].titulo;
 
-    let contenidoHTML = '<div class="catalogo-grid">';
+let contenidoHTML = '';
 
-    contenido[tipo].items.forEach(item => {
+contenido[tipo].categorias.forEach(categoria => {
+
+    contenidoHTML += `<h3 style="margin-top:25px;color:#8B3DD9;">${categoria.subtitulo}</h3>`;
+    contenidoHTML += '<div class="catalogo-grid">';
+
+    categoria.items.forEach(item => {
 
         let mensaje = encodeURIComponent("Hola, quiero información sobre " + item.nombre + " de COPY STORE");
 
@@ -530,9 +535,10 @@ if(!contenido[tipo]) return;
 
     contenidoHTML += '</div>';
 
-    body.innerHTML = contenidoHTML;
+});
 
-    modal.style.display = "flex";
+body.innerHTML = contenidoHTML;
+modal.style.display = "flex";
 }
 
 // Cerrar al hacer click en la X
