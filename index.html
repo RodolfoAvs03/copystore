@@ -383,9 +383,18 @@ function openModal(tipo){
             titulo: "IMPRESIÓN DIGITAL",
             texto: `
             <p><strong>Formatos disponibles:</strong></p>
-            <p>•	A4, A3, A2, A1, A0<br>•	Super A3<br>•	Mega A3</p>
-            <p><strong>Servicios especializados:</strong></p>
-            <p>•	Impresión de planos arquitectónicos<br>•	Copias de planos<br>•	Impresión en tablones<br>•	Material técnico y profesional</p>`
+            items: [
+                { nombre: " A4, A3, A2, A1, A0", img: "img/cuadernos.jpg" },
+                { nombre: " Super A3", img: "img/carpetas.jpg" },
+                { nombre: " Mega A3", img: "img/esferos.jpg" },
+            texto: `
+            <p><strong>Formatos disponibles:</strong></p>
+                { nombre: " Impresión de planos arquitectónicos ", img: "img/archivadores.jpg" },
+                { nombre: " Copias de planos ", img: "img/material.jpg" }
+                { nombre: " Impresión en tablones ", img: "img/material.jpg" }
+                { nombre: " Material técnico y profesional ", img: "img/material.jpg" }
+            ]
+
         },
 
         acabados: {
