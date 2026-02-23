@@ -456,6 +456,20 @@ if(!contenido[tipo]) return;
 
     modal.style.display = "flex";
 }
+
+// Cerrar al hacer click en la X
+document.querySelector(".close").addEventListener("click", function(){
+    document.getElementById("modal").style.display = "none";
+});
+
+// Cerrar al hacer click fuera del contenido
+window.addEventListener("click", function(event){
+    const modal = document.getElementById("modal");
+    if(event.target === modal){
+        modal.style.display = "none";
+    }
+});
+    
 </script>
     
 </body>
