@@ -160,8 +160,10 @@ footer{
 .modal-content{
     background:white;
     padding:30px;
-    width:90%;
-    max-width:500px;
+    width:95%;
+    max-width:1100px;   /* MÁS ANCHO EN PC */
+    max-height:85vh;    /* Limita altura */
+    overflow-y:auto;    /* Scroll interno */
     border-radius:15px;
     text-align:left;
     animation:fadeIn 0.3s ease;
@@ -169,8 +171,8 @@ footer{
 
 .catalogo-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:25px;
     margin-top:20px;
 }
 
@@ -186,6 +188,18 @@ footer{
     margin-bottom:10px;
 }
 
+@media (min-width: 1024px){
+
+    .catalogo-item img{
+        height:180px;
+    }
+
+    .modal-content{
+        padding:40px;
+    }
+
+}
+    
 .btn-whatsapp{
     display:inline-block;
     background:#25D366;
